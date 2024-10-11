@@ -1,0 +1,31 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.panel {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: background-color 0.5s ease;
+}
+
+#panel1 {
+    background-color: #3498db;
+}
+
+#panel2 {
+    background-color: #e74c3c;
+}
+
+#panel3 {
+    background-color: #2ecc71;
+}
+
+#panel4 {
+    background-color: #f39c12;
+}
