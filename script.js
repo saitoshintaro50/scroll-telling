@@ -1,11 +1,15 @@
+// スクロールイベントを監視してパネルの表示状態を制御
 window.addEventListener('scroll', () => {
     const panels = document.querySelectorAll('.panel');
-    panels.forEach((panel, index) => {
+    panels.forEach(panel => {
         const panelTop = panel.getBoundingClientRect().top;
-        if (panelTop < window.innerHeight && panelTop > 0) {
-            panel.style.opacity = 1;
+        const windowHeight = window.innerHeight;
+
+        // パネルが画面に入ったら"active"クラスを付与する
+        if (panelTop < windowHeight - 100) {
+            panel.classList.add('active');
         } else {
-            panel.style.opacity = 0.5;
+            panel.classList.remove('active');
         }
     });
 });
