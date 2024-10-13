@@ -11,7 +11,9 @@ body, html {
     justify-content: center;
     align-items: center;
     color: white;
-    transition: background-color 0.5s ease;
+    opacity: 0; /* 初期状態は透明 */
+    transform: translateY(50px); /* 下から登場するような効果 */
+    transition: opacity 1s ease, transform 1s ease; /* フェードと移動を滑らかに */
 }
 
 #panel1 {
@@ -28,4 +30,9 @@ body, html {
 
 #panel4 {
     background-color: #f39c12;
+}
+
+.panel.active {
+    opacity: 1; /* アクティブ状態で表示 */
+    transform: translateY(0); /* 元の位置に戻す */
 }
